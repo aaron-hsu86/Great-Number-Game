@@ -8,7 +8,7 @@ def welcome():
     # session.clear()
     if 'answer' not in session:
         session['answer'] = int(random.randint(1, 100))
-        session['guess_count'] = 7
+        session['guess_count'] = 5
         session['guess_check'] = 'none'
 
     return render_template('index.html')
@@ -37,7 +37,7 @@ def make_a_guess():
 @app.route('/game_over')
 def game_over():
     session['answer'] = int(random.randint(1, 100))
-    session['guess_count'] = 7
+    session['guess_count'] = 5
     session['guess_check'] = 'none'
     return redirect('/')
 
