@@ -19,7 +19,7 @@ def make_a_guess():
     guess = int(request.form['num_guess'])
     answer = session['answer']
     session['num_guess'] = int(request.form['num_guess'])
-    print(answer)
+    # print(answer)
 
     if guess == answer:
         session['guess_check'] = 'correct'
